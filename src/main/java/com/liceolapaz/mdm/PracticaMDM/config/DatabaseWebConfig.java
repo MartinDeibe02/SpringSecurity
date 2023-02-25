@@ -34,7 +34,7 @@ public class DatabaseWebConfig extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/boostrap/**").permitAll().antMatchers("/signup").permitAll().antMatchers("/bcrypt/**").permitAll().antMatchers("/saveUser").permitAll()
 			.antMatchers("/").hasAnyAuthority("USUARIO", "ADMINISTRADOR")
 			.antMatchers("/addSucursal/**").hasAnyAuthority("ADMINISTRADOR")
-			.antMatchers("/insertGame").hasAnyAuthority("ADMINISTRADOR").anyRequest().authenticated().and().formLogin().permitAll();
+			.antMatchers("/insertGame").hasAnyAuthority("ADMINISTRADOR").anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll();
 	}
 	
 	
