@@ -71,8 +71,6 @@ public class ControladorUsuarios {
 		usersService.save(usuario);
 		authService.save(auth);
 
-		
-		
 		return "redirect:/login";
 	}
 }
